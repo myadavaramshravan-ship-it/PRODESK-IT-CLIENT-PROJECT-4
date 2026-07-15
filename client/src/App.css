@@ -1,7 +1,3 @@
-/* ==========================
-   GLOBAL RESET
-========================== */
-
 *{
     margin:0;
     padding:0;
@@ -30,19 +26,11 @@ select{
     outline:none;
 }
 
-/* ==========================
-   PAGE
-========================== */
-
 .scoreboard-page{
     max-width:1200px;
     margin:auto;
     padding:40px 20px;
 }
-
-/* ==========================
-   HEADER
-========================== */
 
 .header{
     display:flex;
@@ -74,10 +62,6 @@ select{
     background:#ffebee;
     color:#c62828;
 }
-
-/* ==========================
-   FORM
-========================== */
 
 .score-form{
     display:grid;
@@ -135,19 +119,12 @@ select{
 .score-form button:hover{
     background:#000;
 }
-/* ==========================
-   SCORE LIST
-========================== */
 
 .score-list{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
     gap:24px;
 }
-
-/* ==========================
-   SCORE CARD
-========================== */
 
 .score-card{
     background:#fff;
@@ -191,10 +168,6 @@ select{
     letter-spacing:1px;
 }
 
-/* ==========================
-   STATUS
-========================== */
-
 .status{
     text-align:center;
     margin:18px 0;
@@ -213,10 +186,6 @@ select{
 .status.upcoming{
     color:#ef6c00;
 }
-
-/* ==========================
-   ACTION BUTTONS
-========================== */
 
 .actions{
     display:flex;
@@ -253,10 +222,6 @@ select{
     background:#b71c1c;
 }
 
-/* ==========================
-   EDIT MODE
-========================== */
-
 .score-card input,
 .score-card select{
     width:100%;
@@ -280,17 +245,9 @@ select{
     font-weight:600;
 }
 
-/* ==========================
-   SAVE / CANCEL BUTTONS
-========================== */
-
 .score-card .actions button{
     min-width:100px;
 }
-/* ==========================
-   LOADER
-========================== */
-
 .loader-container{
     min-height:70vh;
     display:flex;
@@ -324,10 +281,6 @@ select{
     }
 }
 
-/* ==========================
-   EMPTY STATE
-========================== */
-
 .empty-state{
     background:#fff;
     padding:60px 30px;
@@ -348,20 +301,12 @@ select{
     font-size:16px;
 }
 
-/* ==========================
-   ACCESSIBILITY
-========================== */
-
 button:focus,
 input:focus,
 select:focus{
     outline:3px solid #444;
     outline-offset:2px;
 }
-
-/* ==========================
-   SCROLLBAR
-========================== */
 
 ::-webkit-scrollbar{
     width:8px;
@@ -379,10 +324,6 @@ select:focus{
 ::-webkit-scrollbar-thumb:hover{
     background:#666;
 }
-
-/* ==========================
-   RESPONSIVE
-========================== */
 
 @media (max-width:992px){
 
@@ -454,11 +395,6 @@ select:focus{
     }
 
 }
-
-/* ==========================
-   SMOOTH ANIMATIONS
-========================== */
-
 .score-card,
 .score-form,
 .empty-state{
@@ -466,7 +402,6 @@ select:focus{
 }
 
 @keyframes fadeIn{
-
     from{
         opacity:0;
         transform:translateY(15px);
@@ -476,8 +411,8 @@ select:focus{
         opacity:1;
         transform:translateY(0);
     }
-
 }
+
 .visually-hidden{
     position:absolute;
     width:1px;
