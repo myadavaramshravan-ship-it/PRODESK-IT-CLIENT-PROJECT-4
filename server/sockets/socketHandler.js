@@ -12,10 +12,8 @@ const setupSocket = (io) => {
   io.on("connection", (socket) => {
     console.log(`✅ Client Connected: ${socket.id}`);
 
-    // Send current scores to newly connected client
     socket.emit("scores", getScores());
 
-    // Add new match
     socket.on("add-score", (data) => {
       const { isValid, errors } = validateScore(data);
 
@@ -37,11 +35,10 @@ const setupSocket = (io) => {
 
       analytics();
 
-      // Broadcast updated scores to everyone
       io.emit("scores", getScores());
     });
 
-    // Update existing score
+
     socket.on("update-score", (data) => {
       updateScore(data.id, {
         teamA: sanitize(data.teamA),
@@ -55,8 +52,7 @@ const setupSocket = (io) => {
 
       io.emit("scores", getScores());
     });
-
-    // Delete match
+    
     socket.on("delete-score", (id) => {
       const scores = getScores();
       const index = scores.findIndex((item) => item.id === id);

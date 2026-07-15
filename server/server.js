@@ -20,7 +20,6 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
-// REST API
 app.use("/api", routes);
 
 app.get("/", (req, res) => {
@@ -30,7 +29,6 @@ app.get("/", (req, res) => {
   });
 });
 
-// Socket.IO
 setupSocket(io);
 
 const PORT = process.env.PORT || 5000;
